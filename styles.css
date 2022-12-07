@@ -61,6 +61,15 @@
     /* Colocar los elementos en la posicion contrario */
     /* flex-direction: column-reverse;
     flex-wrap: wrap-reverse; */
+
+    /* flex-flow, this is a shorthand for the flex direction and flex-wrap properties, which together define the flex container's
+        main and cross axes.
+        The default value is row nowrap
+    */
+    /*
+        1 sola columna con los elementos sin envolver
+    */
+    flex-flow: column nowrap;
 }
 
 .item {
