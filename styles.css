@@ -1,0 +1,72 @@
+/*
+    El box model, toma en consideracion el border para el tamaño de la caja, si no estuviera esto,
+    el tamaño de la caja lo tomaria solo del elemento MAS el border, padding, margin, incrementando asi su tamaño
+*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box
+}
+
+.container {
+    /* 
+    "background" tt's a shortand for:
+    background-color  
+    background-image  
+    background-position  
+    background-repeat  
+    background-attachment  
+    background-clip  
+    background-origin  
+    background-size
+
+    background: darkblue;
+    */
+    background-color: #333;
+
+    /*
+        vh = viewport height
+        vw = viewport width
+
+        Unidades en altura y anchura que hacen referencia a la ventana(anchura y altura del navegador)
+
+        Sus valores se expresan en porcentaje de 0 a 100.
+        width: 100vw; (anchura del 100% de la anchura de la ventana grafica)
+        heigth: 50vh; (altura del 50% de la altura de la ventana grafica)
+        line-heigth: 3vh; (altura de linea del 3% de altura de la ventana grafica)
+    */
+    height: 30vh;
+
+    display: flex;
+    /* inline-flex: Los contenedores flexboxs se van a colocar en linea */
+    /* display: inline-flex; */
+
+    /* Invierte los elementos y los coloca al lado contrario */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /*
+        Pasa los elementos la siguiente linea
+    */
+    flex-wrap: wrap;
+
+    /*
+        Mantiene los elementos en una sola linea, adaptando su espacio
+    */
+    /* flex-wrap: nowrap; */
+
+    /* Colocar los elementos en la posicion contrario */
+    /* flex-direction: column-reverse;
+    flex-wrap: wrap-reverse; */
+}
+
+.item {
+    border: medium solid #999;
+    /* Cada elemento toma el 20% de la pantalla (si aplica, con "nowrap" no aplica) */
+    width: 20%;
+    /* height: 20%; */
+    background-color: #666;
+}
